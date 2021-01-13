@@ -1,0 +1,50 @@
+<h1>Приветствуем) Вашему вниманию представлен сайт, с помощью которого вы можете повысить свой словарный запас!</h1>
+<p>Здесь вы можете заполнять персональный словарь, чтобы всегда иметь под рукой сложные слова, необходимые именно вам!</p>
+<p>Создавайте тесты и редактируйте их, заменяя старые слова новыми.</p>
+<p>Хотите больше? с удовольствием вам поможем! Оставляйте заявку на прохождение курса и наши коллеги свяжутся с вами по указанной почте (<a href="/zayavka">мы уже ждем вас тут ^_^</a>)</p>
+<hr>
+<div>
+    <p class="pd" style = "font-size:20px; color: blue;"></p>
+</div>
+
+<div class="glavnaya">
+    <div class="userfild">
+            <% if logged_in? %>
+                <div class="reg">Вы зашли под именем: <span><%=  current_user.log %></span></div>
+                <div class="logout"><a href="/logout" style="color:#000">Выйти</a></div>
+            <%  else  %>
+                <div class="login"><a href="/login" style="color:#000">Войти</a></div>
+                <div class="reg"><a href="/users/new" style="color:#000">Регистрация</a></div>
+            <% end %>
+
+    <div>
+</div>
+
+<style type="text/css">
+	.foto{
+    width: 100%;
+    position: absolute;
+	}
+
+	.glavnaya{
+		position: relative;
+	}
+
+	.userfild{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+	}
+
+	.login, .logout{
+    font-size: 20px;
+    font-weight: bold;
+        text-decoration: underline;
+	}
+
+	.reg{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+	}
+</style>
