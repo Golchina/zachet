@@ -1,7 +1,7 @@
 <h1>Приветствуем) Вашему вниманию представлен сайт, с помощью которого вы можете повысить свой словарный запас!</h1>
 <p>Здесь вы можете заполнять персональный словарь, чтобы всегда иметь под рукой сложные слова, необходимые именно вам!</p>
 <p>Создавайте тесты и редактируйте их, заменяя старые слова новыми.</p>
-<p>Хотите больше? с удовольствием вам поможем! Оставляйте заявку на прохождение курса и наши коллеги свяжутся с вами по указанной почте (<a href="/zayavka">мы уже ждем вас тут ^_^</a>)</p>
+<p>Хотите больше? с удовольствием вам поможем! Оставляйте заявку на прохождение курса и наши коллеги свяжутся с вами по указанной почте (<%= link_to t("zayavka"), zayavka_path %>)</p>
 <hr>
 <div>
     <p class="pd" style = "font-size:20px; color: blue;"></p>
@@ -10,16 +10,16 @@
 <div class="glavnaya">
     <div class="userfild">
             <% if logged_in? %>
-                <div class="reg">Вы зашли под именем: <span><%=  current_user.log %></span></div>
-                <div class="logout"><a href="/logout" style="color:#000">Выйти</a></div>
+                <div class="reg"><%= t 'your-name'%> <span><%=  current_user.log %></span></div>
+                <div class="logout"><a href="/logout" style="color:#000"><%= t'out'%></a></div>
             <%  else  %>
-                <div class="login"><a href="/login" style="color:#000">Войти</a></div>
+                <div class="login"><a href="/login" style="color:#000"><%= t 'in'%></a></div>
                 <div class="reg"><a href="/users/new" style="color:#000">Регистрация</a></div>
             <% end %>
-
     <div>
 </div>
-
+<div class="reg"><%= link_to 'En', root_path(locale: :en),class:'nav-link' %> 
+<%= link_to 'Ru', root_path(locale: :ru),class:'nav-link' %></div>
 <style type="text/css">
 	.foto{
     width: 100%;

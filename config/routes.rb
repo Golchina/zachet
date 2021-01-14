@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  scope "(:locale)",locale: /#{I18n.available_locales.join("|")}/ do
   get 'users/new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -24,4 +25,5 @@ resources :zayavka
 resources :slovar
 resources :tests
 resources :users
+end
 end

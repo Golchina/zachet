@@ -1,21 +1,21 @@
 <%= form_for :vopros, url:tests_path do |f| %>
 	<p>
-		Номер теста<br>
+		<%= t 'num-test'%><br>
 		<%= f.text_field :nt %>
 	</p>	
 
 	<p>
-		Номер вопроса<br>
+		<%= t 'num-question'%><br>
 		<%= f.text_field :nv %>
 	</p>	
 
 	<p>
-		Вопрос<br>
+		<%= t 'question'%><br>
 		<%= f.text_field :vop %>
 	</p>
 
 	<p>
-		Ответ<br>
+		<%= t 'ans'%><br>
 		<%= f.text_field :otv %>
 	</p>	
 

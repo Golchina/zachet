@@ -31,3 +31,16 @@
 
 en:
   hello: "Hello world"
+  num-question: "Question number"
+  your-name: "Your name: "
+  homepage: "Homepage"
+  slovar: "Dictionary"
+  zayavka: "send ^_^"
+  tests-Page: "Pass tests"
+  test: "Your tests"
+  edit-test: "Edit test"
+  question: "Question"
+  out: "Sign out"
+  in: "Sign in"
+  num-test: "Test number"
+  ans: "Answer"
